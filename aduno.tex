@@ -20,7 +20,12 @@ ikaliam@uvic.ca}
 \IEEEauthorblockN{Nathan Lambert}
 \IEEEauthorblockA{University of Victoria\\
 Victoria, British Columbia\\
-nlambert@uvic.ca}}
+nlambert@uvic.ca}
+\and
+\IEEEauthorblockN{Daniela Damian}
+\IEEEauthorblockA{University of Victoria\\
+Victoria, British Columbia\\
+danielad@cs.uvic.ca}}
 
 \begin{document}
 \maketitle
@@ -46,6 +51,8 @@ Similar Services&  Real-time&   Control of&  Tags&    Visual layout&      Chat&\
 GitHub Issues   &	-&	        \cmark&	                \cmark& -&                  -\\ 
 Google Code     &   -&          \cmark&                 -&      -&                  -\\
 Jazz            &   -&          \cmark&                 \cmark& -&             -    \\
+MindMeister & \cmark& -& -& \cmark& - \\
+Trello & \cmark& -& \cmark& -& \cmark\\
 Aduno           &   \cmark&     \cmark&                 \cmark& \cmark&             \cmark\\
 \hline
 \end{tabular}
@@ -53,7 +60,6 @@ Aduno           &   \cmark&     \cmark&                 \cmark& \cmark&         
 \caption{Comparing Collaborative Tools\label{tab:services}}
 \label{tab:otherservices}
 \end{table}
-
 
  This might be efficient for teams that have also more informal means of communicating and negotiating work, but distributed teams mostly miss out on these indirect communication methods. We hypothesize that a highly visual, real-time environment for creating and managing work items between team members, can better support developers through the design process and can produce benefits in terms of the clarification, errors and speed of this part of the work process. 
 
@@ -131,26 +137,6 @@ In the following section we describe how we conceptualized Aduno after our initi
 \caption{Aduno Screenshot}
 \label{fig:adunoscreenshot}
 \end{figure*}
-
-\begin{table}[h]
-\begin{center}
-\begin{tabular}{@{\hspace{.2cm}}ccc@{\hspace{.2cm}}c@{\hspace{.2cm}}c@{\hspace{.2cm}}c@{\hspace{.2cm}}c@{\hspace{.2cm}}}
-\hline
-Similar Services&  Real-time&   Control of&  Tags&    Visual layout&      Chat&\\
- & & WorkItems& & & &\\
-\hline
-GitHub Issues   &	-&	        \cmark&	                \cmark& -&                  -\\ 
-Google Code     &   -&          \cmark&                 -&      -&                  -\\
-Jazz            &   -&          \cmark&                 \cmark& -&             -    \\
-MindMeister & \cmark& -& -& \cmark& - \\
-Trello & \cmark& -& \cmark& -& \cmark\\
-Aduno           &   \cmark&     \cmark&                 \cmark& \cmark&             \cmark\\
-\hline
-\end{tabular}
-\end{center}
-\caption{Comparing Collaborative Tools\label{tab:services}}
-\label{tab:otherservices}
-\end{table}
 
 Other collaborative development environments (CDEs) have some of their features mapped in Table~\ref{tab:otherservices}.  They provide an almost exclusively asynchronous approach to developing articulative work, and this is one of the motivators for Aduno.  Aduno poses to interface with these other CDEs and create functionality to create semi-synchronous collaborative experience.  GitHub was chosen as the preferred backend because of it's robust and open API, in addition to it hosting almost three million open-source repositories.
 
