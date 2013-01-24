@@ -34,7 +34,28 @@ In this paper we introduce Aduno, a shared workspace tool that allows distribute
 
 Teams today, especially as they become distributed, need {\sc cscw} applications that support them through all phases of their collaboration by providing them with the essential context. Successful collaboration between members of a distributed team requires that people are aware of each others' actions and that they maintain this awareness so that there are as few disruptions as possible in their workflow and their coordination. It is also important that they are able to collaboratively negotiate and carry out work tasks, so tools that combine real-time editing with visual workspaces help towards commonly agreed upon task management. 
 
-One setting that these principles take effect in is distributed software development, where teams need to coordinate for different sets of activities until they have built the end product. During the earlier stages of development, developers need to establish work items to plan and organize their work around. A comparison between some of the most popular and widely used tolls for collaborative software development shows that they mostly rely on text-based methods of establishing work items and handling workflow, not providing highly visualized features and not being particularly real-time. This might be efficient for teams that have also more informal means of communicating and negotiating work, but distributed teams mostly miss out on these indirect communication methods. We hypothesize that a highly visual, real-time environment for creating and managing work items between team members, can better support developers through the design process and can produce benefits in terms of the clarification, errors and speed of this part of the work process. 
+One setting these principles take effect in is distributed software development, where teams need to coordinate for different sets of activities until they have built the end product. During the earlier stages of development, developers need to establish work items to plan and organize their work around. A comparison between some of the most popular and widely used tolls for collaborative software development, seen in Table~\ref{tab:otherservices}, shows that they mostly rely on text-based methods of establishing work items and handling workflow, not providing highly visualized features and not being particularly real-time.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{@{\hspace{.2cm}}ccc@{\hspace{.2cm}}c@{\hspace{.2cm}}c@{\hspace{.2cm}}c@{\hspace{.2cm}}c@{\hspace{.2cm}}}
+\hline
+Similar Services&  Real-time&   Control of&  Tags&    Visual layout&      Chat&\\
+ & & WorkItems& & & &\\
+\hline
+GitHub Issues   &	-&	        \cmark&	                \cmark& -&                  -\\ 
+Google Code     &   -&          \cmark&                 -&      -&                  -\\
+Jazz            &   -&          \cmark&                 \cmark& -&             -    \\
+Aduno           &   \cmark&     \cmark&                 \cmark& \cmark&             \cmark\\
+\hline
+\end{tabular}
+\end{center}
+\caption{Comparing Collaborative Tools\label{tab:services}}
+\label{tab:otherservices}
+\end{table}
+
+
+ This might be efficient for teams that have also more informal means of communicating and negotiating work, but distributed teams mostly miss out on these indirect communication methods. We hypothesize that a highly visual, real-time environment for creating and managing work items between team members, can better support developers through the design process and can produce benefits in terms of the clarification, errors and speed of this part of the work process. 
 
 We introduce a shared workspace application that enables visually creating and organizing work tasks in real time, targeted towards software development teams. Our solution originates from the basic concept of a shared whiteboard, incorporates communication and collaborative features that are present in the state-of-the-art tools developed for the same target group, and successfully supports group and workspace awareness as a collaborative basis in development projects. In line with the growing best practice of using Github as a collaborative platform for development management, Aduno supports synchronizing with Github's issue tracker for quickly translating work items to actionable pieces of development effort.  Aduno uses the real time collaborative aspects of whiteboards, and extends it to more distributed settings, while leveraging a persistant data source like Github.
 
@@ -133,9 +154,6 @@ Aduno           &   \cmark&     \cmark&                 \cmark& \cmark&         
 
 Other collaborative development environments (CDEs) have some of their features mapped in Table~\ref{tab:otherservices}.  They provide an almost exclusively asynchronous approach to developing articulative work, and this is one of the motivators for Aduno.  Aduno poses to interface with these other CDEs and create functionality to create semi-synchronous collaborative experience.  GitHub was chosen as the preferred backend because of it's robust and open API, in addition to it hosting almost three million open-source repositories.
 
-\subsection{Purpose}
-Aduno was constructed around the requirements described in Section~\ref{sec:background}.  From this model, the requirements were gathered and formulated into implementation.  The main aspects of collaborative applications that were the basis of the architectural design decisions of Aduno are \emph{speed}, \emph{synchronicity}, and \emph{simplicity}.  With these components in mind, the development team built Aduno to be able to interface with the GitHub API, or other RESTful services, to provide a faster, more effective way to collaborate on articulative tasks. 
-
 \subsection{Feature Description}
 Figure~\ref{fig:adunoscreenshot} shows a typical example of Aduno's interface, with a few emphasized features: {\bf (1)} The top navigation bar with a menu to select the repository to work on, and an indicator showing other online collaborators. {\bf (2)} Tabbed workflow panel that lets users switch between label list, milestone list, and chat area. {\bf (3)} Label filters that let users show only specific work items based on a specific label {\bf (4)} Work items that can be edited in real-time by several users. They can be linked to other work items, as shown in the screenshot. This allows for a visual representation of links, which is not offered by other services.
 
@@ -176,6 +194,9 @@ The elements of workspace awareness outlined in Table~\ref{tab:Gutwin} should be
 {\bf Location} – The location of the user’s work is shown by the username attached to a work item when they are doing edits. If the user moves a work item around, their location becomes apparent.
 
 {\bf Ownership} - Storing a history of modifications to work items is a way to add awareness for users that are not synchronously working, and allows for reflection on the creation process.
+
+\subsection{Purpose}
+Aduno was constructed around the requirements described in Section~\ref{sec:background}.  From this model, the requirements were gathered and formulated into implementation.  The main aspects of collaborative applications that were the basis of the architectural design decisions of Aduno are \emph{speed}, \emph{synchronicity}, and \emph{simplicity}.  With these components in mind, the development team built Aduno to be able to interface with the GitHub API, or other RESTful services, to provide a faster, more effective way to collaborate on articulative tasks. 
 
 \subsection{Architecture}
 With \emph{speed} being one of the most important aspects of the design, the architecture chosen for the server-side technology is crucial.  Node.js\footnote{A platform for building fast, scalable network applications, http://nodejs.org}, a platform of server-side JavaScript built on Google Chrome's V8 JavaScript runtime, was chosen as our platform.  Node has been quickly adopted as a powerful platform for web applications such as Cloud9\footnote{A collaborative web IDE built in Node.js}, LinkedIn, Windows Azure and more.  Tilkov \& Vinoski~\cite{TV10} have shown Node as a viable choice for non-blocking web applications.  Using Node allows Aduno to be deployed easily to the Amazon Elastic Cloud compute instances as a cloud service, which offers reliability and scalability.
