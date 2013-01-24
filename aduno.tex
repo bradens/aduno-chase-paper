@@ -36,7 +36,7 @@ Teams today, especially as they become distributed, need {\sc cscw} applications
 
 One setting that these principles take effect in is distributed software development, where teams need to coordinate for different sets of activities until they have built the end product. During the earlier stages of development, developers need to establish work items to plan and organize their work around. A comparison between some of the most popular and widely used tolls for collaborative software development shows that they mostly rely on text-based methods of establishing work items and handling workflow, not providing highly visualized features and not being particularly real-time. This might be efficient for teams that have also more informal means of communicating and negotiating work, but distributed teams mostly miss out on these indirect communication methods. We hypothesize that a highly visual, real-time environment for creating and managing work items between team members, can better support developers through the design process and can produce benefits in terms of the clarification, errors and speed of this part of the work process. 
 
-We introduce a shared workspace application that enables visually creating and organizing work tasks in real time, targeted towards software development teams. Our solution originates from the basic concept of a shared whiteboard, incorporates communication and collaborative features that are present in the state-of-the-art tools developed for the same target group, and successfully supports group and workspace awareness as a collaborative basis in development projects. In line with the growing best practice of using Github as a collaborative platform for development management, Aduno supports synching with Github's issue tracker for quickly translating work items to actionable pieces of development effort.
+We introduce a shared workspace application that enables visually creating and organizing work tasks in real time, targeted towards software development teams. Our solution originates from the basic concept of a shared whiteboard, incorporates communication and collaborative features that are present in the state-of-the-art tools developed for the same target group, and successfully supports group and workspace awareness as a collaborative basis in development projects. In line with the growing best practice of using Github as a collaborative platform for development management, Aduno supports synchronizing with Github's issue tracker for quickly translating work items to actionable pieces of development effort.  Aduno uses the real time collaborative aspects of whiteboards, and extends it to more distributed settings, while leveraging a persistant data source like Github.
 
 The paper is structured as follows: We present background and work relating to building groupware applications supporting collaborative work in Section~\ref{sec:background} and explain how we used this as a foundation for Aduno's requirements. We then present the tool's conceptualization and design decisions in Section~\ref{sec:concept} and describe the initial evaluation that we carried out with a team of experts in Section~\ref{sec:evaluation}. Section~\ref{sec:results} presents the results of our evaluation. We describe our future work goals in Section~\ref{sec:future} and conclude the paper in Section~\ref{sec:conclusion}.
 
@@ -121,6 +121,8 @@ Similar Services&  Real-time&   Control of&  Tags&    Visual layout&      Chat&\
 GitHub Issues   &	-&	        \cmark&	                \cmark& -&                  -\\ 
 Google Code     &   -&          \cmark&                 -&      -&                  -\\
 Jazz            &   -&          \cmark&                 \cmark& -&             -    \\
+MindMeister & \cmark& -& -& \cmark& - \\
+Trello & \cmark& -& \cmark& -& \cmark\\
 Aduno           &   \cmark&     \cmark&                 \cmark& \cmark&             \cmark\\
 \hline
 \end{tabular}
@@ -310,7 +312,7 @@ During this study Aduno has been evaluated using an expert user evaluation, whic
 
 Although this input from the expert evaluators is extremely useful, these types of feature requests were anticipated due to the prototypical nature of the tool.  The future work on Aduno will include a significant amount of development in these areas, as well as potentially interfacing the backend with another service such as IBM Jazz\footnote{Project lifecycle management tools by IBM -- https://jazz.net/story/about}, or Atlassian Jira\footnote{Production grade project tracking system -- http://atlassian.com/software/jira/overview}. Due to the modular design of the Aduno API, the developers can easily plug in new services.  
 
-Larger teams is another focus of the future development.  As shown in Section~\ref{sec:results}, the results of the evaluation were positive, but the experts wanted a lot more support for larger projects -- or more work items to be seen at once.  This is a crucial feature for Aduno that has to, and will be addressed.  The implementation could include a zoomable work board, which could act as a map that can be scrolled and interacted with.   
+Larger teams is another focus of the future development.  As shown in Section~\ref{sec:results}, the results of the evaluation were positive, but the experts wanted a lot more support for larger projects -- or more work items to be seen at once.  This is a crucial feature for Aduno that has to, and will be addressed.  The implementation could include a zoomable work board, which could act as a map that can be scrolled and interacted with.  
 
 \subsection{Evaluation}
 We plan to do a more extensive evaluation of Aduno in terms of user engagement, and also perform a quantitative analysis to investigate how its use affects team productivity. One idea to attract more users for our evaluation is to import data from their projects on GitHub into Aduno and then contact them with a demo of the tool with their own data. This approach will motivate the team by giving them a real data snapshot of their issue tracker already running in Aduno and can instantly show them the value of the tool.  
@@ -323,7 +325,7 @@ Since Aduno helps the team collaboratively define and link work items, especiall
 
 \textit{Does the use of real-time collaborative tools for task management in the design phase speed up the following stages of development?}
 
-\textit{Does the use of real-time collaborative tools for task management in the design phase lead to beware clarification requests in the following stages of development?}
+\textit{Does the use of real-time collaborative tools for task management in the design phase lead to fewer clarification requests in the following stages of development?}
 
 Aduno aims towards consistently supporting the development team through their design work and, as a result, minimize the timespan for clarification activities and increase their productivity. We plan to design a field study around these two research questions, using geographically distributed teams. 
 
