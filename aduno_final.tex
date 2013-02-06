@@ -72,7 +72,7 @@ We introduce Aduno, a shared workspace application that enables visually creatin
 
 Aduno has been evaluated by means of an expert judgement study involving eight users. The aim of this initial evaluation was to test the usability of the tool for distributed collaboration between software developers, and rank how well it supports collaborative behaviour. The experts have provided positive feedback and the results indicate that Aduno successfully fits the intended purpose.  The future plans for Aduno include an extended quantitative evaluation study, to investigate how it can support distributed software development teams effectively with task management during the design phase.
 
-The paper is structured as follows: We present background and work relating to building groupware applications supporting collaborative work in Section~\ref{sec:background} and explain how we used this as a foundation for Aduno's requirements. We then present the tool's conceptualization and design decisions in Section~\ref{sec:concept} and describe the initial evaluation that we carried out with a team of experts in Section~\ref{sec:evaluation}. Section~\ref{sec:results} presents the results of our evaluation. We describe our future work goals in Section~\ref{sec:future} and conclude the paper in Section~\ref{sec:conclusion}.
+The paper is structured as follows: We present background and work relating to building groupware applications supporting collaborative work in Section~\ref{sec:background} and explain how we used this as a foundation for Aduno's requirements. We then present the tool's conceptualization and design decisions in Section~\ref{sec:concept} and provide some three scenarios of use as examples in Section~\ref{sec:scenarios}. We describe the initial evaluation we carried out with a team of experts in Section~\ref{sec:evaluation} and Section~\ref{sec:results} presents the results of our evaluation. We describe our future work goals in Section~\ref{sec:future} and conclude the paper in Section~\ref{sec:conclusion}.
 
 
 \section{Background \& Related work}
@@ -155,7 +155,7 @@ Below we present how each functionality area is supported through Aduno as well 
 
 \textit{Team communication and coordination} is an integral part of the software development process and is a challenge whenever collaborating teams are distributed. Although it is typical for project management systems in services such as Github to allow comments on each issue, we have included a chat area in Aduno. The comments on work items in Github are used for asynchronous communication, and this was not sufficient for our tool. A chat system provides users with a secondary communication channel that allows them to engage in a synchronous discussion about work items that would not typically be appropriate for asynchronous work item comments. Since comments in Github must also be attached to only one work item, having this chat area helps teams develop broader goals and facilitates common ground through more in-depth conversation.
 
-\textit{Persistent project data synchronization} is an important and highly functional aspect of Aduno.  The data modeled in Aduno is transferred as you work to issue trackers such as Github, meaning teams are able to enjoy the best of both worlds by using Aduno's highly visual, real-time environment for design tasks, and smoothly integrating with their existing workflow. Once a user signs in Aduno with their Github credentials they have all their repositories and respective issues in place and they can select what they want to work on. When an edit is performed on a work item in Aduno, the ``Sync" indicator at the top right of the item turns from green to orange to signal that there is an unsynchronized change. To synchronize with Github, the user may click on the ``Sync All" button at the top of the page, or they may click on a work item's ``Sync" button to synchronize it individually. This gives the team more control over what work items get synced with the associated service.
+\textit{Persistent project data synchronization} is an important and highly functional aspect of Aduno.  The data modelled in Aduno is transferred as you work to issue trackers such as Github, meaning teams are able to enjoy the best of both worlds by using Aduno's highly visual, real-time environment for design tasks, and smoothly integrating with their existing workflow. Once a user signs in Aduno with their Github credentials they have all their repositories and respective issues in place and they can select what they want to work on. When an edit is performed on a work item in Aduno, the ``Sync" indicator at the top right of the item turns from green to orange to signal that there is an unsynchronized change. To synchronize with Github, the user may click on the ``Sync All" button at the top of the page, or they may click on a work item's ``Sync" button to synchronize it individually. This gives the team more control over what work items get synced with the associated service.
 
 \begin{figure*}[t]
 \includegraphics[width=\textwidth]{aduno-screenshot}
@@ -173,17 +173,6 @@ Figure~\ref{fig:adunoscreenshot} shows a typical example of Aduno's interface, w
 \end{enumerate}
 
 A major functionality proposed by Aduno is the ability to \textit{organize work items on the work board}. Users can create, edit, link, and move work items on the work board, and their changes are transparent to all collaborators. The feature to link work items is particularly important, as in other services work items are displayed in a list without any notion of priority. Although they allow for links between work items, users must follow a link to view them. Having a visual representation of the links allows users to quickly glance at the related work items. Allowing users to move the work items around on the work board gives them several opportunities, including being able to arrange them in whatever context is appropriate and order them accordingly. Work items can also be grouped together to imply a connection.  In Figure~\ref{fig:adunoscreenshot}, the visual representation of links can be seen, which gives the work items more context, and allows for richer visual models.  
-\newpage
-\subsection{Example Scenario}
-To do premilinary design of a new feature on a large webapp, a team of developers and managers must meet to construct the work items for the feature.  
-\begin{enumerate}
-	\item All members have a distributed meeting, sign into Aduno, and load the appropriate repository.
-	\item Members are able to chat, to start the meeting.  
-	\item Members create work items with initial requirements, high level and unrefined.
-	\item Members edit work items and transparently collaborate with others in real time, catching mistakes and asking clarification questions as they appear.  The work items show the currently editing user, and updates across all clients. 
-	\item Labels and assignees are added as the work items become more well-defined, as the areas of the feature become more concrete.
-	\item Synchronization with the company repository has integrated the new work into the respective developers workflows, and work can begin.
-\end{enumerate}
 
 \subsection{Maintaining workspace awareness}
 
@@ -266,6 +255,37 @@ With \emph{speed} being one of the most important aspects of the design, the arc
 \emph{Synchronicity} is a crucial component of Aduno and was a great influence over the frameworks chosen for the tool.  The Meteor Framework\footnote{An open-source web application framework focused on real-time updates} was chosen to support asynchronous data among users, since Meteor pushes changes out to clients dynamically, updating their screens without refreshing, and unobtrusively keeping users synchronized.  
 
 \emph{Simplicity} is a key point in any application that needs to attract its new users, and Aduno had this principle as a top priority.  The web toolkit used to support this is Twitter Bootstrap, a very common open-source user interface toolkit, with approximately 100 developers.
+
+\section{Scenarios of use}
+\label{sec:scenarios}
+
+\subsection{Collaboratively Creating Work Items}
+To do premilinary design of a new feature on a large webapp, a team of developers and managers must meet to construct the work items for the feature.  
+\begin{enumerate}
+	\item All members have a distributed meeting, sign into Aduno, and load the appropriate repository.
+	\item Members are able to chat, to start the meeting.  
+	\item Members create work items with initial requirements, high level and unrefined.
+	\item Members edit work items and transparently collaborate with others in real time, catching mistakes and asking clarification questions as they appear.  The work items show the currently editing user, and updates across all clients. 
+	\item Labels and assignees are added as the work items become more well-defined, as the areas of the feature become more concrete.
+	\item Synchronization with the company repository has integrated the new work into the respective developers workflows, and work can begin.
+\end{enumerate}
+
+\subsection{Visually Representing System Areas}
+A single user wants to view all work items related to a specific system area, \textit{performance}, for example. 
+\begin{enumerate}
+	\item User logs in and selects the repository.
+	\item User selects the \textit{performance} label in the labels panel.
+	\item The system clears the workboard and displays all work items that have the \textit{performance} label.  All of the links between work items are displayed visually with lines attaching the work items.
+	\item The user may rearrange and interact with the work items, as well as see any other users that are online.
+\end{enumerate}
+
+\subsection{Relationship Between Tasks}
+A single user wants to view and interact with a work item and it's related tasks. 
+\begin{enumerate}
+	\item User logs in and selects the repository.
+	\item The user views a work item and all of the links that are associated to it using lines attached to the work items.
+	\item The system shows all the users that are currently working on the work items.
+\end{enumerate}
 
 \section{Evaluation}
 \label{sec:evaluation}
