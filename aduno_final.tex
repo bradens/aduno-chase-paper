@@ -30,7 +30,7 @@
 
 \author{\IEEEauthorblockN{Braden Simpson\IEEEauthorrefmark{0}, Eirini Kalliamvakou\IEEEauthorrefmark{0}, Nathan Lambert\IEEEauthorrefmark{0} and Daniela Damian\IEEEauthorrefmark{0}}
 \IEEEauthorblockA{\IEEEauthorrefmark{0}Department of Computer Science, University of Victoria\\
-braden@uvic.ca, ikaliam@uvic.ca, nlambert@uvic.ca, danielad@cs.uvic.ca}}
+brsmp@acm.org, ikaliam@uvic.ca, nlambert@uvic.ca, danielad@cs.uvic.ca}}
 
 \begin{document}
 \maketitle
@@ -258,9 +258,10 @@ With \emph{speed} being one of the most important aspects of the design, the arc
 
 \section{Scenarios of use}
 \label{sec:scenarios}
+In this section we describe three typical example scenarios for Aduno, most useful for developers in distributed teams. The scenarios include a team collaboratively creating work items, and single users filtering system areas and examining relationships between tasks.
 
 \subsection{Collaboratively Creating Work Items}
-To do premilinary design of a new feature on a large webapp, a team of developers and managers must meet to construct the work items for the feature.  
+To do preliminary design of a new feature on a large web application, a team of developers and managers must meet to construct the work items for the feature.  
 \begin{enumerate}
 	\item All members have a distributed meeting, sign into Aduno, and load the appropriate repository.
 	\item Members are able to chat, to start the meeting.  
@@ -275,16 +276,16 @@ A single user wants to view all work items related to a specific system area, \t
 \begin{enumerate}
 	\item User logs in and selects the repository.
 	\item User selects the \textit{performance} label in the labels panel.
-	\item The system clears the workboard and displays all work items that have the \textit{performance} label.  All of the links between work items are displayed visually with lines connecting the work items.
+	\item The system clears the work board and displays all work items that have the \textit{performance} label.  All of the links between work items are displayed visually with lines connecting the work items.
 	\item The user may rearrange and interact with the work items, as well as see any other users that are online.
 \end{enumerate}
 
-\subsection{Relationship Between Tasks}
+\subsection{Examining Relationships Between Tasks}
 A single user wants to view and interact with a work item and its related tasks. 
 \begin{enumerate}
 	\item User logs in and selects the repository.
-	\item The user views a work item and all of the links that are associated to it using lines attached to the work items.
-	\item The system shows all the users that are currently working on the work items.
+	\item The user views a work item and all of the interrelated ones by following the links associated with the respective work item.
+	\item The system shows all the users that are currently working on these work items.
 \end{enumerate}
 
 \section{Evaluation}
