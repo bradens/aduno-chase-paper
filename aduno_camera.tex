@@ -294,7 +294,7 @@ Aduno proposes enhancements on two levels of collaborative work design for softw
 %	\item The system shows all the users that are currently working on these work items.
 %\end{enumerate}
 
-\section{Evaluation}
+\section{Evaluation \& Results}
 \label{sec:evaluation}
 
 To evaluate Aduno's usability and fit for the intended use, we carried out an expert judgement study involving eight users, forming four pairs. The participants had on average four years of experience in distributed software development and have participated in multiple collaborative projects.
@@ -342,16 +342,12 @@ Thompson \cite{Thompson67} defined three types of coordination, \textit{standard
 %\caption{Collaborative behaviours and coordination \label{tab:collabchecklist}}
 %\end{table}
 
-The questionnaire had four sections and a total of twenty five questions. In the first section the experts were asked to provide their development experience in both number of years and number of projects they have participated in. They were also asked to indicate the tools or platforms that they are currently using for task creation and management. There was also a yes/no question of whether the experts have so far experienced difficulties with managing work tasks in previous projects. 
+The questionnaire had four sections and a total of twenty five questions. In the first section the experts gave information about their development experience, tools and platforms they use for task creation and management, and indicated whether they have so far experienced difficulties with managing work tasks in previous projects. The experts were then asked to rate Aduno's usefulness for visualizing work items, brainstorming, and translating ideas to actionable items. A 5-point Likert-like scale was used for rating, ranging from ``Not useful" to ``Very useful". The participants rated Aduno's ease to use, learn, and integrate with their current workflow, using the same type of scale ranging from ``Very difficult" to ``Very easy".
 
-In the second section of the questionnaire, the experts were asked to rate Aduno's usefulness for visualizing work items, brainstorming, and translating ideas to actionable items. A 5-point Likert-like scale was used for rating, ranging from ``Not useful" to ``Very useful". Experts were also asked to rate Aduno's ease to use, learn, and integrate with their current workflow, using the same type of scale ranging from ``Very difficult" to ``Very easy".
+In the next section of the questionnaire, the experts were provided with the definitions of Clark's~\cite{Clark96} eight collaborative behaviours and asked to rate their importance and their satisfaction by Aduno's support for them. Importance and satisfaction were rated on a 5-point Likert scale ranging from ``Trivial" to ``Critical" for importance, and ``Not satisfied" to ``Fully satisfied" for satisfaction. Finally, experts were asked to describe their expectations for Aduno, supposing that they would adopt Aduno for their projects, in terms of impact on team productivity, as well as challenges expected for their workflow. Participants could also suggest future improvements and/or development areas for Aduno.
 
-The third section of the questionnaire asked the experts to rate the importance of Clark's~\cite{Clark96} collaborative behaviours and their satisfaction by Aduno's support for them. The experts were provided with the definitions of the eight behaviours, that were slightly modified to reflect the application domain. Importance and satisfaction were rated on a 5-point Likert scale ranging from ``Trivial" to ``Critical" for importance, and ``Not satisfied" to ``Fully satisfied" for satisfaction. 
-
-For the fourth and final section of the questionnaire, experts were asked to describe their expectations for Aduno. Supposing that they would adopt Aduno for their projects, experts were asked about the impact they would expect on team productivity as well as challenges expected for their workflow. Finally, experts were asked to indicate their intent to adopt Aduno and suggest future improvements and/or development areas for Aduno. In the next section we present and discuss the evaluation results.
-
-\section{Results}
-\label{sec:results}
+%\section{Results}
+%\label{sec:results}
 
 \begin{table}[h]
 \begin{center}
@@ -399,7 +395,7 @@ Satisfaction with Shared Information Space& 3.875& 4& 1.12\\
 Overall, Aduno impressed the experts and received positive feedback. The results of the expert study, and their related descriptive statistics, are shown in Table~\ref{tab:surveyresults}. 
 Aduno was considered a useful tool, receiving its highest score for visualizing work items. The experts also appreciated how easy Aduno is to learn (4.75 mean), use (4 mean), and integrate into their current workflow (3.875 mean).
 
-As mentioned in Section~\ref{sec:evaluation}, the experts were asked to rate the importance they placed on Clark's \cite{Clark96} collaborative behaviors, and their satisfaction with Aduno's support for them. Experts assigned their highest ranking to the \textit{responsiveness} of the application (4.5 mean), relating back to the requirement for real-time environments. \textit{Maintaining awareness} and \textit{sharing an information space} were also ranked as very important elements for collaborative software development tasks with a mean of 4.375. Given the frameworks we reviewed in Section~\ref{sec:intro}, this is not a surprising demand for a {\sc cscw} tool. At the same time Aduno also scored high in terms of the experts' satisfaction with supporting the latter two elements, as shown by the respective means. The lower score of 2.74 obtained by Aduno with regard to \textit{responsiveness} is only relevant in this early stage of development and mostly relates to the choice of architecture and infrastructure rather than the tool's functionality. We expect that in the next version of the tool the responsiveness issues will be resolved. 
+Experts assigned their highest importance ranking to the \textit{responsiveness} of the application (4.5 mean), relating back to the requirement for real-time environments. \textit{Maintaining awareness} and \textit{sharing an information space} were also ranked as very important elements for collaborative software development tasks with a mean of 4.375. Given the frameworks we reviewed in Section~\ref{sec:intro}, this is not a surprising demand for a {\sc cscw} tool. At the same time Aduno also scored high in terms of the experts' satisfaction with supporting the latter two elements, as shown by the respective means. The lower score of 2.74 obtained by Aduno with regard to \textit{responsiveness} is only relevant in this early stage of development and mostly relates to the choice of architecture and infrastructure rather than the tool's functionality. We expect that in the next version of the tool the responsiveness issues will be resolved. 
 
 %not sure this is ok, but we should provide some kind of justification for the lower score 
 
@@ -412,22 +408,10 @@ Regarding challenges, the experts were only concerned with the scalability of Ad
 
 Future work for Aduno will be carried out on two levels: extending the tool's features based on the experts' feedback, and carrying out a quantitative evaluation. 
 \subsection{Development}
-During this study Aduno has been evaluated using an expert user evaluation, which has provided focused and detailed feedback for the development team and has highlighted many new features.  Apart from small user interface improvement suggestions, the main points of interest were as follows:
-
-\begin{itemize}
-    \item{More robust support for large number of work items}
-    \item{Stronger chat features} 
-    \item{More robust API mapping to Github}
-\end{itemize}
-
-Although this input from the expert evaluators is  useful, these types of feature requests were anticipated due to the prototypical nature of the tool.  The future work on Aduno will include a significant amount of development in these areas, as well as potentially interfacing the backend with another service such as IBM Jazz\footnote{Project lifecycle management tools by IBM -- https://jazz.net/story/about}, or Atlassian Jira\footnote{Production grade project tracking system -- http://atlassian.com/software/jira/overview}. Due to the modular design of the Aduno API, the developers can easily plug in new services.  
-
-Larger teams is another focus of the future development.  As shown in Section~\ref{sec:results}, the results of the evaluation were positive, but the experts wanted a lot more support for larger projects -- or more work items to be seen at once.  This is a crucial feature for Aduno that has to, and will be addressed.  The implementation could include a zoomable work board, which could act as a map that can be scrolled and interacted with.  
+Aduno's evaluation through an expert study provided focused and detailed feedback and highlighted new features.  Apart from small user interface improvement suggestions, the main points of interest were more robust support for large number of work items, stronger chat features, and more robust API mapping to Github. The future work on Aduno will include a significant amount of development in these areas, as well as potentially interfacing the backend with other project management services. Due to the modular design of the Aduno API, the developers can easily plug in new services.  Support for larger teams is a crucial feature for Aduno that will be addressed in the tool's ongoing development.  The implementation could include a zoomable work board, which could act as a map that can be scrolled and interacted with.  
 
 \subsection{Evaluation}
-We plan to do a more extensive evaluation of Aduno in terms of user engagement, and also perform a quantitative analysis to investigate how its use affects team productivity. We plan to import data from projects already on Github into Aduno and then contact users with a demo of the tool with their own data. This approach will motivate the team by giving them a real data snapshot of their issue tracker already running in Aduno and can instantly show them the value of the tool.  
-
-With regard to the quantitative study, we plan to assess the impact of Aduno's use on a team's speed and the need for clarification. We essentially want to answer the research question:
+We plan a more extensive evaluation of Aduno in terms of user engagement, and a quantitative analysis to assess the impact of Aduno's use on a team's speed and the need for clarification. We essentially want to answer the research question:
 
 \textit{Can we effectively use real-time collaborative tools for task management in distributed software development?} 
 
@@ -439,11 +423,11 @@ Since Aduno helps the team collaboratively define and link work items, especiall
 
 Aduno aims towards consistently supporting the development team through their design work and, as a result, minimize the timespan for clarification activities and increase their productivity. We plan to design a field study around these two research questions, using geographically distributed teams. 
 
-\section{Conclusion}
-\label{sec:conclusion}
-This paper introduced Aduno, a real-time collaborative tool for defining and managing work items, especially during the design phase, in distributed software development teams. The aim behind the tool is to add a strongly visual support for task management and make it more real-time, as these are features that seem to be missing from popular collaborative development tools. The tool's features fulfill the major requirements for collaborative applications as they are known from the {\sc cscw} and groupware literature, and were evaluated by experts. The evaluation showed that experts appreciate the visual and real-time features that Aduno adds to the functionality also supported by other tools, and expect that the use of these features will bring benefits to a software development project. Future plans for the tool include expanding the feature list as well as doing a quantitative evaluation to measure its impact on team productivity.
+%\section{Conclusion}
+%\label{sec:conclusion}
+%This paper introduced Aduno, a real-time collaborative tool for defining and managing work items, especially during the design phase, in distributed software development teams. The aim behind the tool is to add a strongly visual support for task management and make it more real-time, as these are features that seem to be missing from popular collaborative development tools. The tool's features fulfill the major requirements for collaborative applications as they are known from the {\sc cscw} and groupware literature, and were evaluated by experts. The evaluation showed that experts appreciate the visual and real-time features that Aduno adds to the functionality also supported by other tools, and expect that the use of these features will bring benefits to a software development project. Future plans for the tool include expanding the feature list as well as doing a quantitative evaluation to measure its impact on team productivity.
 
 \bibliographystyle{IEEEtran} 
-\bibliography{aduno_camera}
+\bibliography{aduno_final}
 
 \end{document}
