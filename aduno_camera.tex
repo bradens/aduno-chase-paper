@@ -147,12 +147,12 @@ Aduno offers a shared workspace where a software development team with a Github-
 
 The functionality offered by Aduno is mostly targeted towards the initial stages of a software project's life cycle, when task management activities are more intense. Identifying, creating, and linking tasks in a real-time manner that makes the whole group aware of the process, while leaving room for task negotiation since it is done collaboratively, brings benefit to all users involved in the software development project, from the project manager to the developer. Once work items are in the project's issue tracker then the team can smoothly begin their coding tasks. Aduno proposes enhancements on two levels of collaborative work design for software development; creating a \textit{real-time} collaborative environment and making use of a \textit{highly visual interface}. The tool supports the following four areas of functionality:
 
-\begin{itemize}
-	\item \textbf{Team communication and coordination}
-	\item \textbf{Synchronization to Github's issue tracker}
-	\item \textbf{Workflow management}
-	\item \textbf{Organization of work items on a work board}
-\end{itemize}
+%\begin{itemize}
+%	\item \textbf{Team communication and coordination}
+%	\item \textbf{Synchronization to Github's issue tracker}
+%	\item \textbf{Workflow management}
+%	\item \textbf{Organization of work items on a work board}
+%\end{itemize}
 
 %Below we present how each functionality area is supported through Aduno as well as how the tool's features promote workspace awareness as per Table~\ref{tab:Gutwin}. 
 %\subsection{Feature description}
@@ -174,13 +174,18 @@ The functionality offered by Aduno is mostly targeted towards the initial stages
 %\end{enumerate}
 %
 %
-%\subsection{Maintaining workspace awareness}
-%
-%Gutwin's \& Greenberg's \cite{GG02} framework of information to support workspace awareness for real-time groupware is intended to aid the design of real-time groupware and makes use of different theories and observational studies. The framework is especially relevant to Aduno's design as it targets real-time distributed groupware, shared workspaces and both generational and execution tasks. In terms of group size, the framework mainly discusses small groups. For the current design state of Aduno this fits the tool's purpose, although one of the future goals for Aduno is to investigate how it scales in order to be used by larger groups.
-%
-%Referring back to Table~\ref{tab:Gutwin}, awareness relating to the ``Who'' category sets the aim for groupware to provide information of others present in the workspace and who they are, while authorship information maps an action to the person performing it. Regarding the ``What'' category, a tool must successfully communicate information about what other users are working on, either in detail or in general. Aduno's features, as discussed below, cover these two categories, fulfilling the requirements for real-time groupware supporting awareness. Information relating to the ``Where'' category, is intended for large workspaces and better fitted to construction tasks, such as the one discussed in \cite{GRG96}. To this end, they are not explicitly part of Aduno's design. However, location and gaze information can be inferred by the work items a user is moving around the workspace.
-%
-%The elements of workspace awareness outlined in Table~\ref{tab:Gutwin} should be completely fulfilled in an effective collaborative application, although some of them are not applicable to this tool. As previously mentioned, awareness of gaze, view, and reach would add much complexity to the tool without providing much benefit. However, the remaining elements play an important role in user awareness with Aduno.
+\subsection{Maintaining workspace awareness}
+Gutwin's \& Greenberg's \cite{GG02} framework of information to support workspace awareness for real-time groupware is intended to aid the design of real-time groupware and makes use of different theories and observational studies. The framework is especially relevant to Aduno's design as it targets real-time distributed groupware, shared workspaces and both generational and execution tasks. 
+%In terms of group size, the framework mainly discusses small groups. For the current design state of Aduno this fits the tool's purpose, although one of the future goals for Aduno is to investigate how it scales in order to be used by larger groups.
+
+Referring back to Table~\ref{tab:Gutwin}, awareness relating to the ``Who'' category sets the aim for groupware to provide information of others present in the workspace and who they are, while authorship information maps an action to the person performing it. Regarding the ``What'' category, a tool must successfully communicate information about what other users are working on, either in detail or in general. Aduno's features, as discussed below, cover these two categories, fulfilling the requirements for real-time groupware supporting awareness. Information relating to the ``Where'' category, is intended for large workspaces and better fitted to construction tasks, such as the one discussed in \cite{GRG96}. 
+To this end, they are not explicitly part of Aduno's design. However, location and gaze information can be inferred by the work items a user is moving around the workspace.
+
+The elements of workspace awareness outlined in Table~\ref{tab:Gutwin} should be fulfilled in an effective collaborative application, although some of them are not applicable to this tool.  
+
+The navigation bar is a powerful aspect of the application, as it shows the currently online users, which offers \textit{presence}, as discussed by Gutwin et al.\cite{GG02}.  Additionally, it shows unique badges of other users when they are modifying items, which offers solutions to the \textit{artifact}, and \textit{intent} sections of the framework.  This system of unique user badges and colors allows for \textit{identity}.  Once user \textit{action} is performed on a work item, the changes are propagated in real time to all other connected clients.  \textit{Authorship} is provided by user badges and work item history.  
+
+%As previously mentioned, awareness of gaze, view, and reach would add much complexity to the tool without providing much benefit. However, the remaining elements play an important role in user awareness with Aduno.
 %  
 %{\bf Presence} – An indicator in the navigation bar at the top of the screen signals the presence of other users.  Also, whenever users are interacting with controls in the workspace, they have their presence made known in the form of their unique color and username badge shown.
 %
@@ -208,7 +213,7 @@ The functionality offered by Aduno is mostly targeted towards the initial stages
 % 
 %{\bf Artifact} – As shown in Figure~\ref{fig:workitem}, usernames are displayed at the bottom of it to indicate who is currently working on an item.
 %
-%{\bf Location} – The location of the user’s work is shown by the username attached to a work item when they are doing edits. If the user moves a work item around, their location becomes apparent.
+%{\bf \} – The location of the user’s work is shown by the username attached to a work item when they are doing edits. If the user moves a work item around, their location becomes apparent.
 %
 %{\bf Ownership} - Storing a history of modifications to work items is a way to add awareness for users that are not synchronously working, and allows for reflection on the creation process.
 %
