@@ -7,7 +7,7 @@
 \usepackage{url}
 \newcommand{\cmark}{\ding{51}}%
 
-\title{Aduno: Real-Time Collaborative Work Design In A Shared Workspace}
+\title{Aduno: Real-Time Collaborative Work Design in a Shared Workspace}
 %\author{\IEEEauthorblockN{Braden Simpson}
 %\IEEEauthorblockA{University of Victoria\\
 %Victoria, British Columbia\\
@@ -28,8 +28,8 @@
 %Victoria, British Columbia\\
 %danielad@cs.uvic.ca}}
 
-\author{\IEEEauthorblockN{Braden Simpson\IEEEauthorrefmark{0}, Eirini Kalliamvakou\IEEEauthorrefmark{0}, Nathan Lambert\IEEEauthorrefmark{0} and Daniela Damian\IEEEauthorrefmark{0}}
-\IEEEauthorblockA{\IEEEauthorrefmark{0}Department of Computer Science, University of Victoria\\
+\author{\IEEEauthorblockN{Braden Simpson\IEEEauthorrefmark{0}, Eirini Kalliamvakou\IEEEauthorrefmark{0}, Nathan Lambert\IEEEauthorrefmark{0}, and Daniela Damian\IEEEauthorrefmark{0}}
+\IEEEauthorblockA{\IEEEauthorrefmark{0}Department of Computer Science, University of Victoria\\Victoria, BC, Canada\\
 brsmp@acm.org, ikaliam@uvic.ca, nlambert@uvic.ca, danielad@cs.uvic.ca}}
 
 \begin{document}
@@ -49,6 +49,7 @@ As software development has become highly distributed, teams need to coordinate 
 %Aduno aims to extend the functionality provided by these tools by addressing this limitation.
 
 \begin{table}[h]
+\caption{Comparing Collaborative Tools\label{tab:services}}
 \begin{center}
 \begin{tabular}{@{\hspace{.2cm}}ccc@{\hspace{.2cm}}c@{\hspace{.2cm}}c@{\hspace{.2cm}}c@{\hspace{.2cm}}c@{\hspace{.2cm}}}
 \hline
@@ -64,7 +65,6 @@ Aduno           &   \cmark&     \cmark&                 \cmark& \cmark&         
 \hline
 \end{tabular}
 \end{center}
-\caption{Comparing Collaborative Tools\label{tab:services}}
 \label{tab:otherservices}
 \end{table}
 
@@ -85,7 +85,8 @@ Requirements for Aduno were systematically derived from the background knowledge
 In building groupware applications, effort is placed on how to support collaboration through visibility and mutual awareness. McCarthy et al.'s \cite{MCMM91} experiments with teams collaboratively solving problems with and without a shared space, showed that the degree of disagreement is inversely related to the development of common ground within teams. Gutwin et al. \cite{GRG96} enhanced a shared workspace application with widgets providing activity and location information of participants and found that the add-ons provided value towards the successful completion of the tasks and the degree of awareness maintained within the team.
 
 \begin{table}[h]
-  \centering
+ \caption{Elements of workspace awareness from \cite{GG02}} 
+ \centering
   \begin{small}
     \begin{tabular}{p{5em}lcc}
       \hline
@@ -107,7 +108,6 @@ In building groupware applications, effort is placed on how to support collabora
       \hline
     \end{tabular}
   \end{small}
-  \caption{Elements of workspace awareness from \cite{GG02}}
   \label{tab:Gutwin}
 
 \end{table}
@@ -143,7 +143,7 @@ Based on this background knowledge, the design of Aduno is aimed towards support
 
 %The main aspects of collaborative applications that were the basis of the architectural design decisions of Aduno are \emph{speed}, \emph{synchronicity}, and \emph{simplicity}.  With these components in mind, the development team built Aduno to be able to interface with the Github API, or other RESTful services, to provide a faster, more effective way to collaborate on articulative tasks.  
 
-\subsection{Aduno's functionality}
+\subsection{Aduno's Functionality}
 Aduno offers a shared workspace where a software development team with a Github-hosted project, can collaboratively manipulate their workflow using visual components. Teams can sign in with their Github account details and access their repositories, and Aduno imports the project's issues on the workspace in the form of work items. Users can create, edit, link, and move around work items to organize their joint actions, and coordinate about them by communicating through the tool's chat area. In real time users can also see all changes that other team members are making on the work board and Aduno's visual layout allows them to maintain workspace awareness. The contents of the work board can then be exported to Github's issue tracker, integrated directly into the team's workflow.
 
 The functionality offered by Aduno is mostly targeted towards the initial stages of a software project's life cycle, when task management activities are more intense. Identifying, creating, and linking tasks in a real-time manner that makes the whole group aware of the process, while leaving room for task negotiation since it is done collaboratively, brings benefit to all users involved in the software development project, from the project manager to the developer. Once work items are in the project's issue tracker then the team can smoothly begin their coding tasks. Aduno proposes enhancements on two levels of collaborative work design for software development; creating a \textit{real-time} collaborative environment and making use of a \textit{highly visual interface}.
@@ -175,7 +175,7 @@ The tool supports the following areas of functionality:
 %\end{enumerate}
 %
 %
-\subsection{Maintaining workspace awareness}
+\subsection{Maintaining Workspace Awareness}
 
 Aduno's design follows Gutwin's \& Greenberg's \cite{GG02} framework of information to support workspace awareness for real-time groupware. The framework is intended to aid the design of real-time groupware, is tested through different theories and observational studies, and targets real-time distributed groupware, shared workspaces and both generational and execution tasks. 
 %In terms of group size, the framework mainly discusses small groups. For the current design state of Aduno this fits the tool's purpose, although one of the future goals for Aduno is to investigate how it scales in order to be used by larger groups.
@@ -352,6 +352,7 @@ Readers are encouraged to examine the questionnaire used for the evaluation onli
 
 
 \begin{table}[h]
+\caption{Aduno's evaluation results}
 \begin{center}
 \begin{tabular}{@{\hspace{.1cm}}llll@{\hspace{0cm}}c@{\hspace{0cm}}c@{\hspace{0cm}}c@{\hspace{.1cm}}}
 \hline
@@ -390,7 +391,6 @@ Satisfaction with Shared Information Space& 3.875& 4& 1.12\\
 \hline
 \end{tabular}
 \end{center}
-\caption{Aduno's evaluation results}
 \label{tab:surveyresults}
 \end{table}
 
